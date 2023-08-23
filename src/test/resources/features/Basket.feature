@@ -2,7 +2,7 @@
 Feature: The Basket Page
 
   Background:
-    Given I am on the Homepage
+    Given I am on the HomePage
     When I go to the Products page
     And I add 1 product to the cart
 
