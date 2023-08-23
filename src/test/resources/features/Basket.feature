@@ -1,8 +1,5 @@
 @BasketTest
 Feature: The Basket Page
-  As a user
-  I want to be able to add, remove and edit the products in my basket
-  So that I can checkout with the items I want
 
   Background:
     Given I am on the Homepage
