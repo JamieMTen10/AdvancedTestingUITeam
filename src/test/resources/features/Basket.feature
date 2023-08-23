@@ -1,14 +1,18 @@
 @BasketTest
 Feature: The Basket Page
+  As a user
+  I want to be able to add, remove and edit the products in my basket
+  So that I can checkout with the items I want
 
   Background:
-    Given I am on the HomePage
-    When I go to the Product page
+    Given I am on the Homepage
+    When I go to the Products page
     And I add 1 product to the cart
 
-  Scenario: Add products to the cart
+
+  Scenario Add products to the cart
     Then The message "Product successfully added to your shopping cart" is displayed
-    
+
   Scenario: Remove products from cart
     And I click the "Proceed to checkout" button
     And I remove a product from the cart
