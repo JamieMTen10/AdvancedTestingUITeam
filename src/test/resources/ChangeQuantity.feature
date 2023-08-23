@@ -7,9 +7,9 @@ Feature: I can change the quantity of the product
     Then I am taken to the product's page
     When I click to increase quantity
     Then I see the quantity has increased
-    Then I click add to cart
-    When I click proceed to checkout
-    Then I see the same quantity in the basket page
+    When I click add to cart
+      And I click proceed to checkout
+      Then I see the same quantity in the basket page
 
     Scenario: I can decrease quantity before adding to basket
       When I click on a product
@@ -17,8 +17,8 @@ Feature: I can change the quantity of the product
       When I click to decrease quantity
       Then I see the quantity has decreased
       Then I click add to cart
-      When I click proceed to checkout
-      Then I see the same quantity in the basket page
+        And I click proceed to checkout
+        Then I see the same quantity in the basket page
 
     Scenario: I can increase quantity after adding to basket
       When I click on cart
