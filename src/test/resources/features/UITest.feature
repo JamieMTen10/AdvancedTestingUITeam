@@ -1,11 +1,12 @@
-@tag
+@NewsletterSubscribe
 Feature: Subscribe to newsletters functionality
 
   Scenario : Subscribe to newsletter
     Given I am on the home page
-    When   I enter my email address into the subscription box
+    When I enter my email address into the subscription box
     Then I see confirmation that I have subscribed to the newsletter
 
+@SortByFunction
 Feature: Sort by functionality
 
   Background:
@@ -28,7 +29,7 @@ Feature: Sort by functionality
     And I sort by price high to low
     Then I see products ordered from highest price to lowest price
 
-
+@Checkout
 Feature: User can Checkout
 
   Background:
@@ -45,7 +46,7 @@ Feature: User can Checkout
     And I am on the checkout page
     And I select my address
     And I select my shipping method
-    And I pay by check
+    And I select pay by check
     And I agree to the terms of service
     Then My order confirmation is displayed
 
