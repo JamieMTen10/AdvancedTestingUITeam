@@ -1,6 +1,6 @@
 Background:
 
-Given I am on the homepage
+Given I am on the HomePage
 When I click on the Sign in link
 And I click on the No account? Create one here link
 
