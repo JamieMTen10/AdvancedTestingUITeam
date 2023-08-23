@@ -21,11 +21,11 @@ Feature: Sort by functionality
     And I sort by name Z-A
     Then I see product results in reverse alphabetical order
 
-  Scenario: Price low to high
+  Scenario: Sort by price low to high
     And I sort by price low to high
     Then I see products ordered from lowest price to highest price
 
-  Scenario: Price high to low
+  Scenario: Sort by price high to low
     And I sort by price high to low
     Then I see products ordered from highest price to lowest price
 
