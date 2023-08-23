@@ -10,6 +10,7 @@ Feature: The Basket Page
     Then The message "Product successfully added to your shopping cart" is displayed
     
   Scenario: Remove products from cart
+    And I click the "Proceed to checkout" button
     And I remove a product from the cart
     Then The product is no longer in the cart
 
