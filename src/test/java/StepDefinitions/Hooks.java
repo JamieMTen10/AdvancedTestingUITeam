@@ -10,6 +10,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Hooks {
     public static WebDriver driver;
+
+    
     @BeforeAll
     public static void beforeAll(){
         WebDriverManager.chromedriver().setup();
