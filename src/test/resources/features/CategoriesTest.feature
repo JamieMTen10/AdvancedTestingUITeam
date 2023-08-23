@@ -21,41 +21,41 @@ Feature: Viewing items by category
     #tops
   Scenario: Display "Tops" category
     And I click the expand button of the category menu
-    And I clikc on the "Tops" link
+    And I click on the "Tops" link
     Then the 'Tops' products page is displayed
 
   Scenario: Display T-shirts category
     And I click the expand button of the category menu
-    And I clikc on the "Tops" link
-    And I clikc on the "T-shirts" link
+    And I click on the "Tops" link
+    And I click on the "T-shirts" link
     Then the 'T-shirts' products page is displayed
 
   Scenario: Display Blouses category
     And I click the expand button of the category menu
-    And I clikc on the "Tops" link
-    And I clikc on the "Blouses" link
+    And I click on the "Tops" link
+    And I click on the "Blouses" link
     Then the 'Blouses' products page is displayed
 
     #dresses
   Scenario: Display "Dresses" category
     And I click the expand button of the category menu
-    And I clikc on the "Dresses" link
+    And I click on the "Dresses" link
     Then the 'Dresses' products page is displayed
 
   Scenario: Display "Casual Dresses" category
     And I click the expand button of the category menu
-    And I clikc on the "Dresses" link
-    And I clikc on the "Casual Dresses" link
+    And I click on the "Dresses" link
+    And I click on the "Casual Dresses" link
     Then the 'Casual Dresses' products page is displayed
 
   Scenario: Display "Evening Dresses" category
     And I click the expand button of the category menu
-    And I clikc on the "Dresses" link
-    And I clikc on the "Evening Dresses" link
+    And I click on the "Dresses" link
+    And I click on the "Evening Dresses" link
     Then the 'Evening Dresses' products page is displayed
 
   Scenario: Display "Summer Dresses" category
     And I click the expand button of the category menu
-    And I clikc on the "Dresses" link
-    And I clikc on the "Summer Dresses" link
+    And I click on the "Dresses" link
+    And I click on the "Summer Dresses" link
     Then the 'Summer Dresses' products page is displayed
