@@ -24,7 +24,7 @@ Feature: I can change the quantity of the product
       When I click on cart
       Then I am taken to the cart page
       When I click to Increase quantity
-      Then I see the quantity has inceased
+      Then I see the quantity has increased
 
     Scenario: I can decrease quantity after adding to basket
       When I click on cart
