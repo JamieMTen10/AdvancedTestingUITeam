@@ -4,30 +4,27 @@ Feature: I can change the quantity of the product
 
     Scenario: I can increase quantity before adding to basket
     When I click on a product
-    Then I am taken to the product's page
     When I click to increase quantity
     Then I see the quantity has increased
-    When I click add to cart
-      And I click proceed to checkout
-      Then I see the same quantity in the basket page
 
     Scenario: I can decrease quantity before adding to basket
       When I click on a product
-      Then I am taken to the product's page
       When I click to decrease quantity
       Then I see the quantity has decreased
-      Then I click add to cart
+
+    Scenario: The quantity change is carried over to the basket
+      When I click on a product
+      And I click to Increase quantity
+      When I click add to cart
         And I click proceed to checkout
         Then I see the same quantity in the basket page
 
     Scenario: I can increase quantity after adding to basket
       When I click on cart
-      Then I am taken to the cart page
-      When I click to Increase quantity
+      And I click to Increase quantity
       Then I see the quantity has increased
 
     Scenario: I can decrease quantity after adding to basket
       When I click on cart
-      Then I am taken to the cart page
-      When I click to decrease quantity
+      And I click to decrease quantity
       Then I see the quantity has decreased
