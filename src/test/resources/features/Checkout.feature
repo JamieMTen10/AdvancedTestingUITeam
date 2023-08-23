@@ -1,3 +1,4 @@
+@Checkout
 Feature: User can Checkout
 
   Background:
