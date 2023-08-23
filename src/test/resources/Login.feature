@@ -22,7 +22,7 @@ Then a 'Please match the requested format’ error message is displayed
 
 Scenario: I log in without filling in a password or email
 
-And I log in without filling in a required field
+And I try to register without filling in a required field
 Then a ‘Please fill out this field’ error message is displayed
 
 Scenario: I log in with an incorrect password or email
