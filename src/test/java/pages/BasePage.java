@@ -32,13 +32,14 @@ abstract class BasePage {
             return false;
         }
     }
-
-
+    void findAndType(By elementSelector, String inputString) {
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementSelector));
+        element.sendKeys(inputString);
+    }
     void clearBrowserCache() {
         driver.manage().deleteAllCookies(); //delete all cookies
     }
-
-    String getAttribute(By selector) {
+    String getAttribute(By selector){
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(selector));
         return element.getAttribute("value");
     }
