@@ -14,11 +14,11 @@ abstract class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
-    // Constructor
-    BasePage(WebDriver driver) {
+    BasePage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        this.wait = wait;
     }
+
 
     // Method to wait for an element to be clickable and then click it.
     void waitAndClick(By selector) {
@@ -35,11 +35,18 @@ abstract class BasePage {
             return false;
         }
     }
-
     // Method to find an element by selector and type a specified string into it.
+  
     void findAndType(By elementSelector, String inputString) {
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementSelector));
         element.sendKeys(inputString);
+    }
+    void clearBrowserCache() {
+        driver.manage().deleteAllCookies(); //delete all cookies
+    }
+    String getAttribute(By selector){
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(selector));
+        return element.getAttribute("value");
     }
 
     // Method to clear the browser's cache by deleting all cookies.
