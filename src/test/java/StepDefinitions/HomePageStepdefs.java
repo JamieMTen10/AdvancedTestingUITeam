@@ -26,24 +26,6 @@ public class HomePageStepdefs {
         homePage.goTo();
     }
 
-    @When("I am signed in")
-    public void iAmSignedIn() {
-        homePage.accountPageVisible();
-
-    }
-
-    @And("I click on a product")
-    public void iClickOnAProduct() {
-        homePage.viewProduct();
-
-
-    }
-
-    @When("I search {string} in the search bar")
-    public void iSearchInTheSearchBar(String arg0) {
-        homePage.dressSearch();
-    }
-
     @When("I enter my email address into the subscription box")
     public void iEnterMyEmailAddressIntoTheSubscriptionBox() {
         homePage.subToNewsletter();
