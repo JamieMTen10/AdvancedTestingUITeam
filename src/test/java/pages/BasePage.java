@@ -33,10 +33,6 @@ abstract class BasePage {
         }
     }
 
-    void findAndType(By elementSelector, String inputString) {
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementSelector));
-        element.sendKeys(inputString);
-    }
 
     void clearBrowserCache() {
         driver.manage().deleteAllCookies(); //delete all cookies
