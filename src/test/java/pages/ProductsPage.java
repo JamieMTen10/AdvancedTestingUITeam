@@ -4,14 +4,15 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Objects;
 
 public class ProductsPage extends BasePage {
 
     // Constructor
-    public ProductsPage(WebDriver driver) {
-        super(driver);
+    public ProductsPage(WebDriver driver, WebDriverWait wait) {
+        super(driver,wait);
     }
 
 
