@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import static java.lang.Integer.parseInt;
+
 public class ProductPage extends BasePage {
     public ProductPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
@@ -16,6 +18,7 @@ public class ProductPage extends BasePage {
     private static final By ADD_TO_CART = By.cssSelector(".add-to-cart");
     private static final By VERIFY_ADD_TO_CART = By.cssSelector("#myModalLabel");
     private static final By CHECKOUT_BUTTON = By.cssSelector("a.btn.btn-primary");
+    private static final By PRODUCT_QUANTITY = By.cssSelector("#quantity_wanted");
 
 
     public void addToCart() {

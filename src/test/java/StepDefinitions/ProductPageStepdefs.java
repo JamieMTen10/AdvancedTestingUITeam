@@ -6,9 +6,9 @@ import org.junit.Assert;
 import pages.ProductPage;
 
 import static StepDefinitions.Hooks.driver;
-
+import static StepDefinitions.Hooks.wait;
 public class ProductPageStepdefs {
-ProductPage productPage = new ProductPage(driver);
+ProductPage productPage = new ProductPage(driver,wait);
     @And("I click to increase quantity on the product page {int} times")
         public void iClickToIncreaseQuantityOnTheProductPage(int times){
         System.out.println("I click to increase quantity on the product page");
