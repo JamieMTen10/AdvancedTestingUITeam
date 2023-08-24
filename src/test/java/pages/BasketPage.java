@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import static java.lang.Integer.parseInt;
 
 public class BasketPage extends BasePage {
     public BasketPage(WebDriver driver, WebDriverWait wait) {
@@ -39,10 +40,7 @@ public class BasketPage extends BasePage {
         waitAndClick(DECREASE_QUANTITY);
     }
 
-    public String getQuantity() {
-        return getAttribute(PRODUCT_QUANTITY);
+    public int getQuantity(){
+        return parseInt(getAttribute(PRODUCT_QUANTITY));
     }
 }
-
-
-
