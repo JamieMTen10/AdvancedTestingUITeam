@@ -20,7 +20,7 @@ public class HomePage extends BasePage {
 
     private static final By SEARCH_BAR = By.cssSelector("input.ui-autocomplete-input");
 
-    private static final By NEWSLETTER_SUBSCRIBE = By.cssSelector("#footer > div.container > div > div.block_newsletter.col-lg-8.col-md-12.col-sm-12 > div > div > form > div > div:nth-child(1) > div.input-wrapper > input[type=text]");
+    private static final By NEWSLETTER_SUBSCRIBE = By.cssSelector(".input-wrapper");
 
     private static final By SUBSCRIPTION_CONFIRM =By.cssSelector("p.alert.alert-success");
 
