@@ -26,7 +26,7 @@ public class Hooks {
         driver.manage().window().maximize();
     }
 
-    @Before
+    @After
     public static void after() {
         driver.manage().deleteAllCookies();
     }

@@ -1,3 +1,4 @@
+@ChangeQuantity
 Feature: I can change the quantity of the product
   Background:
     Given I am on the HomePage

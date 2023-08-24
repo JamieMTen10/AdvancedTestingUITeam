@@ -5,9 +5,10 @@ import io.cucumber.java.en.When;
 import pages.HomePage;
 
 import static StepDefinitions.Hooks.driver;
-
+import static StepDefinitions.Hooks.wait;
 public class HomePageStepdefs {
-    HomePage homepage = new HomePage(driver);
+    HomePage homepage = new HomePage(driver,wait);
+
     @Given("I am on the HomePage")
     public void iAmOnTheHomePage(){
         System.out.println("I am on the HomePage");
