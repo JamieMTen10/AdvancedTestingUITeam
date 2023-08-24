@@ -83,7 +83,7 @@ public class BasketStepDefs {
     // instead, need to assert that the element isn't there
     public void thereAreOfTheProductInTheCart(int prodNo) {
         if (prodNo >= 1) {
-            Assert.assertEquals(String.valueOf(prodNo), basketPage.getQuantity());
+            Assert.assertEquals(prodNo, basketPage.getQuantity());
         } else {
             Assert.assertFalse(basketPage.productNotPresent());
         }
