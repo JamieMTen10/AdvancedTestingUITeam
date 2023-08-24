@@ -40,9 +40,13 @@ public class RegisterPageStepDef {
 
     @When("I click on a {string}")
     public void iClickOnA(String socialTitle) {
+        registerPage.pressSocialTitle();
+        System.out.println("Choosing a social title");
     }
 
     @And("I enter {string}")
     public void iEnter(String DOB) {
+        registerPage.enterDateOfBirth();
+        System.out.println("Ive entered DOB");
     }
 }

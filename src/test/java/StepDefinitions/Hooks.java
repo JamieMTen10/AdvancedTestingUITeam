@@ -18,10 +18,10 @@ public class Hooks {
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
     }
-    @AfterAll
-    public static void afterAll(){
-        driver.close();
-    }
+//    @AfterAll
+//    public static void afterAll(){
+//        driver.close();
+//    }
 
 
 }
