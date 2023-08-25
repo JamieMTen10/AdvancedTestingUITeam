@@ -79,7 +79,7 @@ public class MyPageStepDefs {
     }
 
     @Then("the Please include an {string} in the email address error message is displayed")
-    public void thePleaseIncludeAnInTheEmailAddressErrorMessageIsDisplayed(String Alert) {
+    public void assertValidationErrorText(String Alert) {
     }
 }
 
