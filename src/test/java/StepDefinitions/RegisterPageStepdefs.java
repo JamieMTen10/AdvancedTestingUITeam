@@ -4,10 +4,8 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import pages.ProductsPage;
 
 import static StepDefinitions.Hooks.driver;
-import static StepDefinitions.Hooks.wait;
 
 
 public class RegisterPageStepdefs {
