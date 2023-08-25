@@ -8,7 +8,7 @@ import pages.RegisterPage;
 
 import static StepDefinitions.Hooks.driver;
 
-public class RegisterPageStepDef {
+public class RegisterPageStepdefs {
     RegisterPage registerPage=new RegisterPage(driver);
     @And("I will be directed to the registration page")
     public void directToRegisterPage() {
