@@ -44,7 +44,7 @@ public class HomePage extends BasePage {
     }
     
     public void subToNewsletter(){
-        basePage.findAndType(NEWSLETTER_SUBSCRIBE, "exampleemail@test.com");
+        findAndType(NEWSLETTER_SUBSCRIBE, "exampleemail@test.com");
     }
   
     public void verifySubscription(){
@@ -53,10 +53,10 @@ public class HomePage extends BasePage {
     }
 
     public void dressSearch(){
-        basePage.findAndType(By.cssSelector("input.ui-autocomplete-input"), "dress");
+        findAndType(By.cssSelector("input.ui-autocomplete-input"), "dress");
     }
 
-    private boolean elementIsVisible(WebElement alertBox) {
+     boolean elementIsVisible(WebElement alertBox) {
         return false;
     }
   

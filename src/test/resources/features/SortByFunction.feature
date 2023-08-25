@@ -2,7 +2,7 @@
 Feature: Sort by functionality
 
   Background:
-    Given I am on the home page
+    Given I am on the HomePage
     When I search "dress" in the search bar
 
   Scenario: Sort by name A-Z
