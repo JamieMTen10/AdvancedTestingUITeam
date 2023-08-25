@@ -11,7 +11,7 @@ public class RegisterPage {
     public void registerAnAccount(){
         driver.findElement(By.cssSelector("[name=firstname]")).sendKeys("Zuber");
         driver.findElement(By.cssSelector("[name=lastname]")).sendKeys("Mahmood");
-        driver.findElement(By.cssSelector("[name=email]")).sendKeys("jobbbhjoe10@gmail.com");
+        driver.findElement(By.cssSelector("[name=email]")).sendKeys("jooobbbbbbbbbbhjoe10@gmail.com");
         driver.findElement(By.cssSelector("[name=password]")).sendKeys("Password123");
     }
 

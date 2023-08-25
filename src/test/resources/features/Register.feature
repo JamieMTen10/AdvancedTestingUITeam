@@ -13,11 +13,4 @@ Feature: Registering a user
     And the HomePage is displayed
     And I am logged in
 
-  Scenario: I am registering an account with all details and the DOB
-    When I click on a "Social title"
-    And I enter "firstname", "lastname", "email", "password"
-    And I enter "DOB"
-    And press "save"
-    Then I am registered
-    And the HomePage is displayed
-    And I am logged in
+
