@@ -19,7 +19,7 @@ public class MyPageStepDefs {
 
     @Given("I am on the HomePage")
     public void iAmOnTheHomePage() {
-        homePage.navigateToHomePage();
+        homePage.goTo();
     }
 
 
@@ -80,6 +80,7 @@ public class MyPageStepDefs {
 
     @Then("the Please include an {string} in the email address error message is displayed")
     public void assertValidationErrorText(String Alert) {
+        Assert.assertEquals("validationMessage", signInPage.getErrorMessageText());
     }
 }
 

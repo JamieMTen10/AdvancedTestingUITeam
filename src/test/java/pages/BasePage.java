@@ -7,10 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
-import org.openqa.selenium.By;
-
 
 abstract class BasePage {
 
@@ -45,11 +41,11 @@ abstract class BasePage {
         element.sendKeys(inputString);
     }
 
-    String getAttribute(By selector){
+    String getAttribute(By selector) {
         return getAttribute(selector, "value");
     }
 
-    String getAttribute(By selector, String attributeName){
+    String getAttribute(By selector, String attributeName) {
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(selector));
         return element.getAttribute(attributeName);
     }

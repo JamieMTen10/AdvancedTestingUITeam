@@ -8,19 +8,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage extends BasePage {
 
+    public static final By PRODUCT = By.cssSelector("[data-id-product='1']");
+    public static final By ACCOUNT_PAGE = By.cssSelector(".account");
+    public static final By ALL_PRODUCTS_LINK = By.cssSelector(".all-product-link");
+    private static final By SIGN_IN_BUTTON = By.cssSelector("[title='Log in to your customer account']");
+    private static final By SEARCH_BAR = By.cssSelector("input.ui-autocomplete-input");
+    private static final By NEWSLETTER_SUBSCRIBE = By.cssSelector(".input-wrapper");
+    private static final By SUBSCRIPTION_CONFIRM = By.cssSelector("p.alert.alert-success");
+    private static final String URL = "http://3.11.77.136/index.php";
     public HomePage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
-
-    private static String URL = "http://3.11.77.136/index.php";
-    public static final By PRODUCT = By.cssSelector("[data-id-product='1']");
-    private static final By SIGN_IN_BUTTON = By.cssSelector("[title='Log in to your customer account']");
-    public static final By ACCOUNT_PAGE = By.cssSelector(".account");
-    public static final By ALL_PRODUCTS_LINK = By.cssSelector(".all-product-link");
-    private static final By SEARCH_BAR = By.cssSelector("input.ui-autocomplete-input");
-    private static final By NEWSLETTER_SUBSCRIBE = By.cssSelector(".input-wrapper");
-    private static final By SUBSCRIPTION_CONFIRM =By.cssSelector("p.alert.alert-success");
-
 
     // Method to navigate to the home page
     public void goTo() {
@@ -42,24 +40,24 @@ public class HomePage extends BasePage {
         WebElement alertBox = driver.findElement(ACCOUNT_PAGE);
         Assert.assertTrue(elementIsVisible(alertBox));
     }
-    
-    public void subToNewsletter(){
+
+    public void subToNewsletter() {
         findAndType(NEWSLETTER_SUBSCRIBE, "exampleemail@test.com");
     }
-  
-    public void verifySubscription(){
+
+    public void verifySubscription() {
         WebElement alertBox = driver.findElement(SUBSCRIPTION_CONFIRM);
         Assert.assertTrue(elementIsVisible(alertBox));
     }
 
-    public void dressSearch(){
+    public void dressSearch() {
         findAndType(By.cssSelector("input.ui-autocomplete-input"), "dress");
     }
 
-     boolean elementIsVisible(WebElement alertBox) {
+    boolean elementIsVisible(WebElement alertBox) {
         return false;
     }
-  
+
     // Method to click on the "All Products" link.
     public void clickAllProductsLink() {
         waitAndClick(ALL_PRODUCTS_LINK);
