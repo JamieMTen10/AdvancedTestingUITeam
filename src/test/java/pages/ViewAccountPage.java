@@ -1,9 +1,7 @@
 package pages;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ViewAccountPage extends BasePage {
@@ -18,7 +16,6 @@ public class ViewAccountPage extends BasePage {
     private static final By CITY_INPUT = By.cssSelector("[name=city]");
     private static final By STATE_INPUT = By.cssSelector("div>select[name=id_state]>option:nth-child(5)");
     private static final By POSTCODE_INPUT = By.cssSelector("[name=postcode]");
-    private static final By COUNTRY_INPUT = By.cssSelector("[name=id_country]");
     private static final By SAVE_BUTTON = By.cssSelector("div>form>footer>button");
     private static final By UPDATE_LINK = By.cssSelector("div.address-footer > a:nth-child(1) > span");
     private static final By DELETE_LINK = By.cssSelector("div.address-footer > a:nth-child(2) > span");
