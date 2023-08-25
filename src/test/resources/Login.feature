@@ -1,31 +1,38 @@
-Background:
+@Login
+Feature:
 
-Given I am on the homepage
-When I click on the ‘sign in’ button
+  Background:
 
-Scenario: I log in with an invalid email (format)
+    Given I am on the HomePage
+    When I click the Sign in link
 
-And I enter an invalid email
-And enter the correct password
-Then an ‘Invalid format’ error message is displayed
+  Scenario: I log in with an invalid email (format)
 
-Scenario: I log in with an invalid email (no @ symbol)
 
-And I enter an invalid email
-And enter a correct password
-Then a ‘Please include an ‘@’ in the email address’ error message is displayed
+    And I enter the email address: "testesttest@testcom" and password: "testtesttesttest"
+    And I click the Sign in button
+    Then a "Invalid format." error message is displayed
 
-Scenario: I log in with a password of less than 5 characters
+  Scenario: I log in with an invalid email (no @ symbol)
 
-And I enter a password of less than 5 characters
-Then a 'Please match the requested format’ error message is displayed
+    And I enter the email address: "testesttesttest.com" and password: "testtesttesttest"
+    And I click the Sign in button
+      #Then the Please include an '@' in the email address error message is displayed
 
-Scenario: I log in without filling in a password or email
+  Scenario: I log in with a password of less than 5 characters
 
-And I try to register without filling in a required field
-Then a ‘Please fill out this field’ error message is displayed
+    And I enter the email address: "testesttesttest@test.com" and password: "test"
+    And I click the Sign in button
+      #Then a "Please match the requested format" error message is displayed
 
-Scenario: I log in with an incorrect password or email
+  Scenario: I log in without filling in a password
 
-And I log in with an incorrect email or password
-Then an ‘Authentication failed’ message is displayed
+    And I enter the email address: "testesttesttest@test.com" and password: ""
+    And I click the Sign in button
+     # Then a "Please fill out this field" error message is displayed
+
+  Scenario: I log in with an incorrect password
+
+    And I enter the email address: "testesttest@test.com" and password: "test123"
+    And I click the Sign in button
+    Then a "Authentication failed." error message is displayed

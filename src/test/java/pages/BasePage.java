@@ -5,17 +5,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.TimeoutException;
 
 import java.time.Duration;
+
+import org.openqa.selenium.By;
+
 
 abstract class BasePage {
 
     protected WebDriver driver;
     protected WebDriverWait wait;
 
-    BasePage(WebDriver driver) {
+    BasePage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        this.wait = wait;
     }
     void waitAndClick(By selector) {
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(selector));
