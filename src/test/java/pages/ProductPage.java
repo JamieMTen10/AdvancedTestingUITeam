@@ -48,5 +48,4 @@ public class ProductPage extends BasePage {
     public void selectDecreaseQuantity(){
         waitAndClick(SELECT_DECREASE_QUANTITY);
     }
-
 }
