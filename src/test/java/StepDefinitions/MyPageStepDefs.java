@@ -78,7 +78,7 @@ public class MyPageStepDefs {
         registerPage.enterRegistrationDetails(name, lastname, emailaddress, password);
     }
 
-    @Then("the Please include an {string} in the email address error message is displayed")
+    @Then("the {string} error message is displayed")
     public void assertValidationErrorText(String Alert) {
         Assert.assertEquals("validationMessage", signInPage.getErrorMessageText());
     }

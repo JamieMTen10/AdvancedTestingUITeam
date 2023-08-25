@@ -14,13 +14,13 @@ Then a "Invalid format." error message is displayed
 Scenario: I register with an invalid email (no @ symbol)
 
 And I register with "name" and "last name" and "testtesttesttesttest.com" and "testtesttesttesttest"
-#Then a "Please include an ‘@’ in the email address" error message is displayed
+Then the "Please include an ‘@’ in the email address" error message is displayed
 
 Scenario: I do not fill out the email field in the form
 
 And I register with "name" and "last name" and "" and "testtesttesttesttest"
-#Then a "Please fill out this field" error message is displayed
-#
+Then the "Please fill out this field" error message is displayed
+
 Scenario: I enter a number or a special character (not including ') into the name field
 
 And I register with "tom3" and "last name" and "testtesttesttesttest@test.com" and "testtesttesttesttest"
@@ -29,7 +29,7 @@ Then a "Invalid name" error message is displayed
 Scenario: I enter a password with less than 5 characters
 
 And I register with "name" and "last name" and "testtesttesttesttest@test.com" and "1234"
-#Then a "Please match the requested format" error message is displayed
+Then the "Please match the requested format" error message is displayed
 
 Scenario: I enter an email that has already been registered
 
