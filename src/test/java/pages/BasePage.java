@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 
 abstract class BasePage {
 
@@ -41,9 +40,7 @@ abstract class BasePage {
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementSelector));
         element.sendKeys(inputString);
     }
-    void clearBrowserCache() {
-        driver.manage().deleteAllCookies(); //delete all cookies
-    }
+
     String getAttribute(By selector){
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(selector));
         return element.getAttribute("value");

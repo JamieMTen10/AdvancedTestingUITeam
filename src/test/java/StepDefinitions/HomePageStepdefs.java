@@ -7,18 +7,22 @@ import pages.HomePage;
 import static StepDefinitions.Hooks.driver;
 import static StepDefinitions.Hooks.wait;
 public class HomePageStepdefs {
-    HomePage homepage = new HomePage(driver,wait);
+    HomePage homePage = new HomePage(driver,wait);
 
     @Given("I am on the HomePage")
     public void iAmOnTheHomePage(){
         System.out.println("I am on the HomePage");
-        homepage.goTo();
+        homePage.goTo();
     }
 
     @When("I click on a product")
     public void iClickOnAProduct() {
         System.out.println("I click on a product");
-        homepage.viewProduct();
+        homePage.viewProduct();
 
+    }
+    @When("I click the All Products link")
+    public void iClickAllProductsLink() {
+        homePage.clickAllProductsLink();
     }
 }

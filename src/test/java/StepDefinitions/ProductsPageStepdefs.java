@@ -7,16 +7,17 @@ import pages.ProductsPage;
 
 
 import static StepDefinitions.Hooks.driver;
+import static StepDefinitions.Hooks.wait;
 import static pages.ProductsPage.*;
 
-public class ProductsPageStepDefinitions {
+public class ProductsPageStepdefs {
 
     // Create an instance of the ProductsPage class
     ProductsPage productsPage;
 
     // Constructor
-    public ProductsPageStepDefinitions() {
-        productsPage = new ProductsPage(driver);
+    public ProductsPageStepdefs() {
+        productsPage = new ProductsPage(driver, wait);
     }
 
 
