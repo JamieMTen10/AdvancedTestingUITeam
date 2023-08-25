@@ -10,10 +10,10 @@ import static StepDefinitions.Hooks.wait;
 
 
 public class HomePageStepdefs {
-    HomePage homePage = new HomePage(driver,wait);
+    HomePage homePage = new HomePage(driver, wait);
 
     @Given("I am on the HomePage")
-    public void iAmOnTheHomePage(){
+    public void iAmOnTheHomePage() {
         System.out.println("I am on the HomePage");
         homePage.goTo();
     }
@@ -24,18 +24,9 @@ public class HomePageStepdefs {
         homePage.viewProduct();
 
     }
+
     @When("I click the All Products link")
     public void iClickAllProductsLink() {
         homePage.clickAllProductsLink();
-    }
-  
-    @When("I enter my email address into the subscription box")
-    public void iEnterMyEmailAddressIntoTheSubscriptionBox() {
-        homePage.subToNewsletter();
-   }
-
-    @Then("I see confirmation that I have subscribed to the newsletter")
-    public void newsletterConfirmation() {
-        homePage.verifySubscription();
     }
 }
