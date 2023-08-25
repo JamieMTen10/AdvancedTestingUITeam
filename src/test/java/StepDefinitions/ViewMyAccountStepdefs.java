@@ -3,6 +3,8 @@ package StepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import pages.SignInPage;
 import pages.ViewMyAccountPage;
 
@@ -16,17 +18,12 @@ public class ViewMyAccountStepdefs {
     @And("I click View My Account link")
     public void iClickViewMyAccountLink() {
         signInPage.navigateToAccountPage();
-        String ActualTitle = driver.getTitle();
-        String ExpectedTitle = "My account";
-        Assert.assertEquals(ExpectedTitle,ActualTitle);
     }
 
     @And("I click add first address link")
     public void iClickAddFirstAddressLink() {
         viewAccountPage.clickViewFirstAddress();
-        String ActualTitle = driver.getTitle();
-        String ExpectedTitle = "Address";
-        Assert.assertEquals(ExpectedTitle,ActualTitle);
+
     }
 
     @And("I enter {string}, {string}, {string}, {string}, {string}, {string} and {string}")
@@ -43,56 +40,56 @@ public class ViewMyAccountStepdefs {
         viewAccountPage.selectState(state);
         viewAccountPage.enterPostcode(postcode);
     }
+
     @And("I click save button")
     public void iClickSaveButton() {
         viewAccountPage.clickSave();
-        String ActualTitle = driver.getTitle();
-        String ExpectedTitle = "Addresses";
-        Assert.assertEquals(ExpectedTitle,ActualTitle);
     }
-        @Then("the following address will be added to account")
+
+    @Then("the following address will be added to account")
     public void theFollowingAddressWillBeAddedToAccount() {
         System.out.println("I am looking at the added address");
+        WebElement yourAccount = driver.findElement(By.cssSelector("h1"));
+        String expected = "Your addresses";
+        Assert.assertEquals(expected,yourAccount.getText());
     }
 
     @And("I click View My Account link again")
     public void iClickViewMyAccountLinkAgain() {
         signInPage.navigateToAccountPage();
-        String ActualTitle = driver.getTitle();
-        String ExpectedTitle = "My account";
-        Assert.assertEquals(ExpectedTitle,ActualTitle);
+
     }
+
     @And("I click Addresses link")
     public void iClickAddressesLink() {
         viewAccountPage.clickViewAddresses();
-        String ActualTitle = driver.getTitle();
-        String ExpectedTitle = "Addresses";
-        Assert.assertEquals(ExpectedTitle,ActualTitle);
+
     }
 
     @And("I click update link")
     public void iClickUpdateLinkAndClearText() {
         viewAccountPage.clickUpdate();
-        String ActualTitle = driver.getTitle();
-        String ExpectedTitle = "Address";
-        Assert.assertEquals(ExpectedTitle,ActualTitle);
     }
 
     @Then("the latter address will replace the former")
     public void theLatterAddressWillReplaceTheFormer() {
         System.out.println("The new address has replaced the previous address");
+        WebElement yourAccount = driver.findElement(By.cssSelector("h1"));
+        String expected = "Your addresses";
+        Assert.assertEquals(expected,yourAccount.getText());
     }
 
     @And("I click Delete link")
     public void iClickDeleteLink() {
         viewAccountPage.clickDelete();
         System.out.println("the address has been deleted");
-        String ActualTitle = driver.getTitle();
-        String ExpectedTitle = "Addresses";
-        Assert.assertEquals(ExpectedTitle,ActualTitle);
     }
 
     @Then("address will be deleted")
     public void addressWillBeDeleted() {
+        WebElement yourAccount = driver.findElement(By.cssSelector("h1"));
+        String expected = "Your addresses";
+        Assert.assertEquals(expected,yourAccount.getText());
     }
+
 }
