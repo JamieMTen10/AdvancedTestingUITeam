@@ -42,24 +42,7 @@ public class HomePage extends BasePage {
         WebElement alertBox = driver.findElement(ACCOUNT_PAGE);
         Assert.assertTrue(elementIsVisible(alertBox));
     }
-    
-    public void subToNewsletter(){
-        basePage.findAndType(NEWSLETTER_SUBSCRIBE, "exampleemail@test.com");
-    }
-  
-    public void verifySubscription(){
-        WebElement alertBox = driver.findElement(SUBSCRIPTION_CONFIRM);
-        Assert.assertTrue(elementIsVisible(alertBox));
-    }
 
-    public void dressSearch(){
-        basePage.findAndType(By.cssSelector("input.ui-autocomplete-input"), "dress");
-    }
-
-    private boolean elementIsVisible(WebElement alertBox) {
-        return false;
-    }
-  
     // Method to click on the "All Products" link.
     public void clickAllProductsLink() {
         waitAndClick(ALL_PRODUCTS_LINK);

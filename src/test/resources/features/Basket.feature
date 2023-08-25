@@ -3,7 +3,7 @@ Feature: The Basket Page
 
   Background:
     Given I am on the HomePage
-    When I go to the Products page
+    When I click on a product
     And I add 1 product to the cart
 
   Scenario: Add products to the cart
