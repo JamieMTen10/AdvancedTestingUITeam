@@ -51,6 +51,9 @@ public class AddressStepdefs {
     @And("I click save button")
     public void iClickSaveButton() {
         viewAccountPage.clickSave();
+        String ActualTitle = driver.getTitle();
+        String ExpectedTitle = "Addresses";
+        Assert.assertEquals(ExpectedTitle,ActualTitle);
     }
 
         @Then("the following address will be added to account")
@@ -61,11 +64,17 @@ public class AddressStepdefs {
     @And("I click View My Account link again")
     public void iClickViewMyAccountLinkAgain() {
         signInPage.navigateToAccountPage();
+        String ActualTitle = driver.getTitle();
+        String ExpectedTitle = "My account";
+        Assert.assertEquals(ExpectedTitle,ActualTitle);
     }
 
     @And("I click Addresses link")
     public void iClickAddressesLink() {
-        viewAccountPage.clickViewAddress();
+        viewAccountPage.clickViewAddresses();
+        String ActualTitle = driver.getTitle();
+        String ExpectedTitle = "Addresses";
+        Assert.assertEquals(ExpectedTitle,ActualTitle);
     }
 
     @And("I click update link")
@@ -82,6 +91,9 @@ public class AddressStepdefs {
     public void iClickDeleteLink() {
         viewAccountPage.clickDelete();
         System.out.println("the address has been deleted");
+        String ActualTitle = driver.getTitle();
+        String ExpectedTitle = "Addresses";
+        Assert.assertEquals(ExpectedTitle,ActualTitle);
     }
 
     @Then("address will be deleted")

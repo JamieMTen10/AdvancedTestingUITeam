@@ -22,7 +22,7 @@ public class ViewAccountPage extends BasePage {
     private static final By SAVE_BUTTON = By.cssSelector("div>form>footer>button");
     private static final By UPDATE_LINK = By.cssSelector("div.address-footer > a:nth-child(1) > span");
     private static final By DELETE_LINK = By.cssSelector("div.address-footer > a:nth-child(2) > span");
-    public void clickViewAddress(){
+    public void clickViewAddresses(){
         waitAndClick(YOUR_ADDRESSES_BOX);
     }
     public void clickViewFirstAddress(){
