@@ -6,7 +6,7 @@ import pages.ProductPage;
 
 import static StepDefinitions.Hooks.driver;
 import static StepDefinitions.Hooks.wait;
-public class ProductPageStepDefs {
+public class ProductPageStepdefs {
 
     ProductPage productPage = new ProductPage(driver,wait);
 
