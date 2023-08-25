@@ -52,11 +52,8 @@ public class SignInPage extends BasePage {
     public void enterPassword(String password) {
         wait.until(ExpectedConditions.elementToBeClickable(PASSWORD_INPUT_FIELD)).sendKeys(password);
     }
-    public String thePleaseIncludeAnInTheEmailAddressErrorMessageIsDisplayed() {
-        return driver.findElement(By.name("email")).getAttribute("validationMessage");
+    public String getValidationErrorText() {
+        return getAttribute(By.name("email"), "validationMessage");
     }
-    //void thePleaseIncludeAnInTheEmailAddressErrorMessageIsDisplayed(String Alert)
-//    public String getErrorMessageText() {
-//        return wait.until(ExpectedConditions.visibilityOfElementLocated(ERROR_MESSAGE)).getText();
 }
 
