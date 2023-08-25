@@ -14,7 +14,7 @@ public class RegisterPageStepdefs {
     @And("I will be directed to the registration page")
     public void directToRegisterPage() {
     }
-    @Then("I am registered")
+    @Then("I am Registered")
     public void iAmRegistered() {
         WebElement yourAccount = driver.findElement(By.cssSelector("h1"));
         String expected = "POPULAR PRODUCTS";
