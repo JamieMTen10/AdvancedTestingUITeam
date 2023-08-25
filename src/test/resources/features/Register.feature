@@ -1,3 +1,4 @@
+@RegisterTest
 Feature: Registering a user
 
   Background: I am on the HomePage
