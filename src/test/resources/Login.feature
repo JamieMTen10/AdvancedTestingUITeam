@@ -17,7 +17,7 @@ Feature:
 
     And I enter the email address: "testesttesttest.com" and password: "testtesttesttest"
     And I click the Sign in button
-      #Then the Please include an '@' in the email address error message is displayed
+    Then the Please include an '@' in the email address error message is displayed
 
   Scenario: I log in with a password of less than 5 characters
 

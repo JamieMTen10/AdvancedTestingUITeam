@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.TimeoutException;
 
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 
@@ -39,7 +39,7 @@ abstract class BasePage {
         }
     }
     // Method to find an element by selector and type a specified string into it.
-  
+
     void findAndType(By elementSelector, String inputString) {
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementSelector));
         element.sendKeys(inputString);

@@ -8,12 +8,9 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import io.cucumber.java.After;
-import org.junit.Before;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
 
+import java.time.Duration;
 
 
 public class Hooks {
@@ -33,6 +30,7 @@ public class Hooks {
 
 
     }
+
     @Before
     public static void before() {
         driver.manage().deleteAllCookies();

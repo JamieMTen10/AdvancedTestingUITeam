@@ -7,9 +7,10 @@ import pages.RegisterPage;
 
 
 import static StepDefinitions.Hooks.driver;
+import static StepDefinitions.Hooks.wait;
 
 public class RegisterPageStepdefs {
-    RegisterPage registerPage=new RegisterPage(driver);
+    RegisterPage registerPage=new RegisterPage(driver, wait);
     @And("I will be directed to the registration page")
     public void directToRegisterPage() {
     }
