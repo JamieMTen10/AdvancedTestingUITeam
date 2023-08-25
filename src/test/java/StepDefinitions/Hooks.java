@@ -37,6 +37,4 @@ public class Hooks {
     public static void afterAll() {
         driver.close();
     }
-
-
 }
