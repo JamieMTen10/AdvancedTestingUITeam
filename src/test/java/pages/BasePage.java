@@ -46,8 +46,12 @@ abstract class BasePage {
     }
 
     String getAttribute(By selector){
+        return getAttribute(selector, "value");
+    }
+
+    String getAttribute(By selector, String attributeName){
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(selector));
-        return element.getAttribute("value");
+        return element.getAttribute(attributeName);
     }
 
     // Method to clear the browser's cache by deleting all cookies.
