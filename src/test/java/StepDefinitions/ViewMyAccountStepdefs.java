@@ -4,14 +4,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.SignInPage;
-import pages.ViewAccountPage;
+import pages.ViewMyAccountPage;
 
 import static StepDefinitions.Hooks.driver;
 import static StepDefinitions.Hooks.wait;
 
-public class AddressStepdefs {
+public class ViewMyAccountStepdefs {
     SignInPage signInPage = new SignInPage(driver, wait);
-    ViewAccountPage viewAccountPage = new ViewAccountPage(driver, wait);
+    ViewMyAccountPage viewAccountPage = new ViewMyAccountPage(driver, wait);
 
     @And("I click View My Account link")
     public void iClickViewMyAccountLink() {
@@ -40,11 +40,9 @@ public class AddressStepdefs {
         viewAccountPage.enterLastName(lastname);
         viewAccountPage.enterAddress(address);
         viewAccountPage.enterCity(city);
-        viewAccountPage.selectState();
+        viewAccountPage.selectState(state);
         viewAccountPage.enterPostcode(postcode);
     }
-
-
     @And("I click save button")
     public void iClickSaveButton() {
         viewAccountPage.clickSave();
@@ -52,7 +50,6 @@ public class AddressStepdefs {
         String ExpectedTitle = "Addresses";
         Assert.assertEquals(ExpectedTitle,ActualTitle);
     }
-
         @Then("the following address will be added to account")
     public void theFollowingAddressWillBeAddedToAccount() {
         System.out.println("I am looking at the added address");
@@ -65,7 +62,6 @@ public class AddressStepdefs {
         String ExpectedTitle = "My account";
         Assert.assertEquals(ExpectedTitle,ActualTitle);
     }
-
     @And("I click Addresses link")
     public void iClickAddressesLink() {
         viewAccountPage.clickViewAddresses();
@@ -77,6 +73,9 @@ public class AddressStepdefs {
     @And("I click update link")
     public void iClickUpdateLinkAndClearText() {
         viewAccountPage.clickUpdate();
+        String ActualTitle = driver.getTitle();
+        String ExpectedTitle = "Address";
+        Assert.assertEquals(ExpectedTitle,ActualTitle);
     }
 
     @Then("the latter address will replace the former")

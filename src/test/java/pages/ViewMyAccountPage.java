@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ViewAccountPage extends BasePage {
-    public ViewAccountPage(WebDriver driver, WebDriverWait wait) {
+public class ViewMyAccountPage extends BasePage {
+    public ViewMyAccountPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
     private static final By FIRST_ADDRESS_BOX = By.cssSelector("a#address-link > span");
@@ -19,6 +19,10 @@ public class ViewAccountPage extends BasePage {
     private static final By SAVE_BUTTON = By.cssSelector("div>form>footer>button");
     private static final By UPDATE_LINK = By.cssSelector("div.address-footer > a:nth-child(1) > span");
     private static final By DELETE_LINK = By.cssSelector("div.address-footer > a:nth-child(2) > span");
+//    //Object of select class
+//    Select cityChoice = new Select(driver.findElement(By.xpath("//*[@class='form-control form-control-select']")));
+//    //Select value
+//    cityChoice.selectByValue("5")
     public void clickViewAddresses(){
         waitAndClick(YOUR_ADDRESSES_BOX);
     }
@@ -52,7 +56,7 @@ public class ViewAccountPage extends BasePage {
     public void enterCity(String city){
         findAndType(CITY_INPUT,city);
     }
-    public void selectState(){
+    public void selectState(String state){
         waitAndClick(STATE_INPUT);
     }
     public void enterPostcode(String postcode){

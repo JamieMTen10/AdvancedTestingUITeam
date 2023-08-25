@@ -6,7 +6,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.SignInPage;
-import pages.ViewAccountPage;
+
 import static StepDefinitions.Hooks.driver;
 import static StepDefinitions.Hooks.wait;
 
