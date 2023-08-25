@@ -1,7 +1,6 @@
 package StepDefinitions;
 
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.HomePage;
 
@@ -23,6 +22,12 @@ public class HomePageStepdefs {
         System.out.println("I click on a product");
         homePage.viewProduct();
 
+    }
+    @Given("I am on the Homepage")
+    public void iAmOnTheHomepage() {
+
+        homePage.goTo();
+        System.out.println("I am on the Homepage");
     }
 
     @When("I click the All Products link")

@@ -1,38 +1,21 @@
 package StepDefinitions;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.HomePage;
 import pages.ProductPage;
 import pages.BasketPage;
 
-import java.util.Optional;
 
 import static StepDefinitions.Hooks.driver;
 import static StepDefinitions.Hooks.wait;
 
 public class BasketStepDefs {
 
-    HomePage homePage = new HomePage(driver, wait);
     ProductPage productPage = new ProductPage(driver, wait);
     BasketPage basketPage = new BasketPage(driver, wait);
 
-    @Given("I am on the Homepage")
-    public void iAmOnTheHomepage() {
 
-        homePage.goTo();
-        System.out.println("I am on the Homepage");
-    }
-
-    @When("I go to the Products page")
-    public void iGoToTheProductsPage() {
-
-        homePage.viewProduct();
-        System.out.println("I am on the products page");
-    }
 
     @And("I add {int} product(s) to the cart")
     public void iAddProductToTheCart(int prodNo) {
@@ -76,6 +59,12 @@ public class BasketStepDefs {
             basketPage.increaseBasketQuantity();
         }
         System.out.println("I increase the number of the product in the cart by " + prodNo);
+    }
+
+    @Then("I see the same quantity in the basket page")
+    public void iSeeTheSameQuantityInTheBasketPage(){
+        System.out.println("I see the same quantity in the basket page");
+        Assert.assertEquals(basketPage.getQuantity(),3);
     }
 
     @Then("There are {int} of the product in the cart")
