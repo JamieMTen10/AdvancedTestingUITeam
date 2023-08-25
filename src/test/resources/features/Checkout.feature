@@ -2,12 +2,12 @@
 Feature: User can Checkout
 
   Background:
-    Given I am on the home page
-    When I am signed in
+    Given I am on the HomePage
+    When I am on the Sign in page
 
   Scenario: Navigate to Checkout Page
     And I click on a product
-    And I add the product to the cart
+    And I add 1 products to the cart
     And I click proceed to checkout
     Then I am on the checkout page
 

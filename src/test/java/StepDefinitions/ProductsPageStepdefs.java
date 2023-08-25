@@ -3,6 +3,7 @@ package StepDefinitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.And;
 import org.junit.Assert;
+import pages.ProductPage;
 import pages.ProductsPage;
 
 
@@ -14,6 +15,7 @@ public class ProductsPageStepdefs {
 
     // Create an instance of the ProductsPage class
     ProductsPage productsPage;
+    ProductPage productPage;
 
     // Constructor
     public ProductsPageStepdefs() {
